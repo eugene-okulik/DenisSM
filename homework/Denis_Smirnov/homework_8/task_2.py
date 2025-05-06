@@ -1,3 +1,6 @@
+import sys
+sys.set_int_max_str_digits(100000)
+
 def fibonacci_generator():
     a, b = 0, 1
     while True:
