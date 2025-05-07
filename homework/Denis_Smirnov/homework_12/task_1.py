@@ -1,5 +1,6 @@
 class Flower:
-    def __init__(self, name, color, price, stem_length, freshness_days, lifespan_days):
+    def __init__(self, name, color, price, stem_length,
+                 freshness_days, lifespan_days):
         self.name = name
         self.color = color
         self.price = price
@@ -7,18 +8,27 @@ class Flower:
         self.freshness_days = freshness_days
         self.lifespan_days = lifespan_days
 
+
 class Rose(Flower):
-    def __init__(self, color='red', price=100, stem_length=50, freshness_days=3, lifespan_days=7):
-        super().__init__('Роза', color, price, stem_length, freshness_days, lifespan_days)
+    def __init__(self, color='red', price=100, stem_length=50,
+                 freshness_days=3, lifespan_days=7):
+        super().__init__('Роза', color, price,
+                         stem_length, freshness_days, lifespan_days)
+
 
 class Tulip(Flower):
-    def __init__(self, color='yellow', price=60, stem_length=40, freshness_days=4, lifespan_days=6):
-        super().__init__('Тюльпан', color, price, stem_length, freshness_days, lifespan_days)
+    def __init__(self, color='yellow', price=60, stem_length=40,
+                 freshness_days=4, lifespan_days=6):
+        super().__init__('Тюльпан', color, price,
+                         stem_length, freshness_days, lifespan_days)
 
 
 class Daisy(Flower):
-    def __init__(self, color='white', price=40, stem_length=30, freshness_days=2, lifespan_days=5):
-        super().__init__('Маргаритка', color, price, stem_length, freshness_days, lifespan_days)
+    def __init__(self, color='white', price=40, stem_length=30,
+                 freshness_days=2, lifespan_days=5):
+        super().__init__('Маргаритка', color, price,
+                         stem_length, freshness_days, lifespan_days)
+
 
 class Bouquet:
     def __init__(self):
@@ -52,11 +62,9 @@ class Bouquet:
         return [flower for flower in self.flowers if condition(flower)]
 
 
-#Проверка работы классов
 rose = Rose(price=100, freshness_days=3)
 tulip = Tulip(price=60, freshness_days=4)
 daisy = Daisy(price=40, freshness_days=2)
-
 
 bouquet = Bouquet()
 bouquet.add_flower(rose)
